@@ -1,5 +1,5 @@
 const Jarvis = new Artyom();
-const button = document.querySelector('button');
+const button = document.getElementById('main-button');
 const icon = button.firstElementChild;
 const diagnostic = document.querySelector('.output');
 
@@ -34,13 +34,11 @@ function click(){
     if(icon.classList.contains('fa-microphone')){
         icon.classList.remove('fa-microphone');
         icon.classList.add('fa-microphone-slash');
-        //document.getElementById("main-button").style.backgroundColor = "rgb(181, 35, 35)"
         firstStart();
     }
     else{
         icon.classList.remove('fa-microphone-slash');
         icon.classList.add('fa-microphone');
-        //document.getElementById("main-button").style.backgroundColor = "#132BB1"
         dictateEnd();
     }
 }
@@ -72,30 +70,15 @@ Jarvis.addCommands([
     },
 ]);
 
+//do not need to stop artyom because it's not initialized at all
 
-//to prevent voice recognition to start automatically
-//maybe don't need it??
-function openJarvis(){
-    Jarvis.fatality();
-    console.log("stopped him!!")
-}
 
-function startJarvis(){
-    Jarvis.initialize({
-        lang:"en-GB",
-        continuous: true,  //listen forever
-        debug:true, // Show what recognizes in the Console
-        listen:true, // Start listening after this
-        speed:0.9, // Talk a little bit slow
-        mode:"normal" // This parameter is not required as it will be normal by default
-    });
-    console.log("Jarvis started")
-}
-
-function stopJarvis(){
-    UserDictation.stop();
-    Jarvis.fatality();
-    console.log("Jarvis stopped")
+//to clear the list
+function clearList(){
+    var l = document.getElementById("list");
+    while(l.firstChild){
+        l.removeChild(l.firstChild);
+    }
 }
 
 

@@ -84,13 +84,16 @@ header{
     border-right: 1px solid black;
 }
 
+
 #list{
-    width: 100%;
-    height: 100%;
-    margin: 40% 0 0 35%;
+    width: 320px;
+    height: 280px;
+    margin: 32% 0 0 35%;
     grid-template-columns: auto auto;
     grid-row: 3;
+    overflow: scroll;
 }
+
 
 #list img{
     width: 30px;
@@ -135,6 +138,19 @@ img{
 
 h3{
     display: inline;
+}
+
+#clear_list{
+    position: absolute;
+    grid-row: 4;
+    margin: 35% 0 0 17%;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #132BB1; 
+    border: none;
+    border-radius: 40px;
+    outline: none;
 }
 
 @media (min-width:320px) and (max-width:768px) {

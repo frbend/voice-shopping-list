@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Voice Shopping List</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./artyom/artyom.window.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b3e1fa2864.js" crossorigin="anonymous"></script>
 </head>
-<body onload="openJarvis()">
+<body>
     <header>
         <h2 class="top">Voice powered shopping list</h2></br>
     </header>   
@@ -20,6 +20,7 @@
                 <div class="content-container">
                     <div id="list"></div>
                 </div>  
+                <button id="clear_list" onclick="clearList()">Clear list</button>
 
                 <!-- old way -> two buttons now there is only one -->
                 <!-- <button class="start" onclick="firstStart()"><span class="fa fa-play"></span> Start dictation</button>
